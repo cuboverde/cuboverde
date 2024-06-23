@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-lg-6 menuCentro">
+    <ul class="nav nav-pills">
+      @if(isLogin){
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Configuracion
+          </a>
+          <ul class="dropdown-menu">
+            <li><a routerLink="/dashboard" class="dropdown-item" >DashBoard</a></li>
+            @if(isRol<=1){
+              <li><a routerLink="/users" class="dropdown-item" >Usuarios</a></li>
+              <li><a routerLink="/categorias" class="dropdown-item " >Categorias</a></li>
+              <!-- <li><hr class="dropdown-divider"></li> -->
+            }
+            @if(isRol<=3){
+              <li><a routerLink="publications" class="dropdown-item" >Publicaciones</a></li>
+            }
+          </ul> 
+        </li>
+        <li class="nav-item"><a routerLink="/salir" class="nav-link">Salir</a></li>
+      }@else{
+        @for (menu of menus; track $index) {
+          <li class="nav-item"><a routerLink="{{menu.link}}" class="nav-link">{{menu.name}}</a></li>
+        }
+      }
+    </ul>
+  </div>
+</div>

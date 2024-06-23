@@ -1,0 +1,36 @@
+img {
+  padding:20px;
+  /* width: 100%; */
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.p20 {
+padding:20px;
+}
+
+.pd30 {
+  padding:30px;
+}
+
+.plr30{
+  padding: 0 30px;
+}
+
+h2 {
+  /* background-color: var(--bs-green); */
+  color: var(--bs-green);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
+.card-img-overlay {
+  right: 20px;
+  bottom: 20px;
+  top: auto;
+  left: auto;
+}

@@ -1,0 +1,23 @@
+<section>
+  <div class="row">
+    <div class="col-lg-6 infoUni">
+      <h3>Universidad Sergio Arboleda</h3>
+      <h4>BootCampo Nivel Integrador</h4>
+      <h4>GRUPO G1 - Modalidad Virtual</h4>
+    </div>
+    <div class="col-lg-6">
+      <h4 class="mt30">Grupo de Trabajo CUBOVERDE.ORG</h4>
+      <div class="row col-lg-12 grupo">
+        @for(yo of nosotros; track yo.id){
+          <div class="card col-lg-4" >
+            <img src="../../../assets/grupo/{{yo.foto}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{yo.nombre}}</h5>
+              <p class="card-text">{{yo.correo}}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

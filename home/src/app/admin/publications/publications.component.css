@@ -1,0 +1,20 @@
+.row {
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+
+.panel-heading >.row {
+  background-color: ghostwhite;
+}
+
+h3 {
+  padding:10px;
+  text-align: center;
+}
+
+.ttab {
+  width: 80px;
+}

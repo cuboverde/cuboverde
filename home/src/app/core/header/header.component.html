@@ -1,0 +1,22 @@
+<section>
+  <div class="row">
+    <header class="d-flex flex-wrap border-bottom">
+      <a routerLink="/home" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <img src="/assets/core/{{entorno.logo}}" class="logo" alt="">
+        <div class="tcenter lh">
+          <span class="fs-4 sombraBlanca">{{entorno.webPage}}</span><br>
+          <span class="fs-4 fs07 sombraBlanca">{{entorno.titulo}}</span><br>
+          <span class="fs-4 fs07 sombraBlanca">{{entorno.slogan}}</span><br>
+      </div>
+      </a>
+      <a class="row tcenter login" routerLink="/login">        
+        <i class="fa-regular fa-user fa-3x "></i>
+        <img src="/assets/core/puntos.png" alt="">
+      </a>
+    </header>
+  </div>
+  <div class="row menu">
+    <app-menu></app-menu>
+  </div>
+</section>
+

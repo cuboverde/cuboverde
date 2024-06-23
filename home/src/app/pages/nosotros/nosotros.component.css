@@ -1,0 +1,111 @@
+
+.infoUni {
+  background-image: url('../../../assets/fondos/images3.jpg');
+  background-repeat: no-repeat;;
+  background-size: cover;
+  position: relative;
+}
+
+.infoUni h3 {
+  font-size: 2rem;
+  margin-top: 25%;
+}
+.card {
+  padding:10px;
+  margin-bottom: 10px;
+  width: 31%;
+  margin: 5px;
+}
+
+.card img {
+  padding:10px;
+}
+
+.card-body {
+  padding:0px;
+}
+
+.titulo {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.subTitulo {
+  font-size: 1.rem;
+  text-align: center;
+}
+
+
+h4 {
+  font-size: 1.5rem;
+  padding:20px;
+
+}
+
+h3, h4 {
+  color:rgb(0,0,0);
+  text-shadow: 1px 1px 2px rgb(214, 199, 199);
+  
+}
+
+h3, h4  {
+  text-align: center;
+}
+
+.grupo, .infoUni {
+  padding: 0;
+  margin: 0;
+}
+
+.cardInfo {
+  width: 48%;
+  margin: 0 10px 20px 0;
+}
+
+.cardInfo .mat-mdc-card-header, .mat-mdc-card-content {
+  padding:0;
+}
+
+.rowCard {
+  display: flex;
+}
+
+.mat-mdc-card-title-group  {
+  text-align: center;
+  padding:5px;
+  display:block;
+
+}
+
+.mat-mdc-card-title {
+  padding:5px 10px;
+}
+
+.grupo {
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: auto;
+  padding:0px 10px;
+} 
+
+.infoGrupo {
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: auto;
+  padding: 0px 10px;
+  display: flex;
+}
+
+.mat-mdc-card-title, .mat-mdc-card-header, .mat-mdc-card-subtitle {
+  text-align: center;
+}
+
+.mat-mdc-card-md-image {
+  width: 80px;
+  height: auto;
+}
+
+.mat-mdc-card-header {
+  display: block;
+  padding: 16px 16px 0;
+}

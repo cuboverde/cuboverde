@@ -1,0 +1,24 @@
+<section>
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      @for (item of carousels; track $index) {
+        <div class="carousel-item active">
+          <img src="/assets/carrousel/{{item.imagen}}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="sombraNegra">{{item.titulo}}</h5>
+            <p class="sombraNegra">{{item.subtitulo}}</p>
+          </div>
+        </div>
+      }
+  
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Proximo</span>
+    </button>
+  </div>
+</section>

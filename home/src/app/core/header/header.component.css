@@ -1,0 +1,75 @@
+section {
+  max-width: 100%;
+  background-image: url('../../../assets/fondos/image10.jpg');
+  background-size: cover;
+  /* background-position: right; */
+  min-height: 172px;
+  background-position-y: 500px;
+}
+
+.fs-4 {
+  text-transform: uppercase;
+  font-weight: 600;
+  color:#000;
+}
+
+.fa-regular {
+  border-radius: 50%;
+  border: 4px solid #FFF;
+  height: auto;
+  width: 80px;
+  padding: 10px;
+}
+.border-bottom {
+  border-bottom: var(--bs-border-width) var(--bs-border-style) #00050a !important
+}
+
+.fs07 {
+  font-size: 0.7rem !important;
+}
+.logoText {
+  line-height: 17px;
+  text-align: center;
+  align-content: center;
+}
+
+header {
+  height: 172px;
+}
+
+.col-lg-4 {
+  margin:auto;
+}
+
+.menu {
+  background-color: #000;
+}
+
+.logoGen {
+  margin-left: 15px;
+  height: 120px;
+}
+
+.tcenter {
+  text-align: center;
+}
+
+.lh {
+  line-height: 18px;
+}
+
+.login {
+  padding: 10px 20px;
+  margin:0 ;
+}
+
+.login i {
+  color:#FFF;
+  margin: auto;
+}
+
+.login img {
+  width: 80%;
+  height: 20%;
+  margin: 0 auto;
+}

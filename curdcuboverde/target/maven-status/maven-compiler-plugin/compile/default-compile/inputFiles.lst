@@ -1,0 +1,10 @@
+/home/sactel-cloud/Documentos/MinTIC/cuboverde.org/curdcuboverde/src/main/java/com/curdcuboverde/CurdcuboverdeApplication.java
+/home/sactel-cloud/Documentos/MinTIC/cuboverde.org/curdcuboverde/src/main/java/com/curdcuboverde/service/RoleService.java
+/home/sactel-cloud/Documentos/MinTIC/cuboverde.org/curdcuboverde/src/main/java/com/curdcuboverde/controller/RoleController.java
+/home/sactel-cloud/Documentos/MinTIC/cuboverde.org/curdcuboverde/src/main/java/com/curdcuboverde/repository/UserRepository.java
+/home/sactel-cloud/Documentos/MinTIC/cuboverde.org/curdcuboverde/src/main/java/com/curdcuboverde/entity/User.java
+/home/sactel-cloud/Documentos/MinTIC/cuboverde.org/curdcuboverde/src/main/java/com/curdcuboverde/config/CorsConfig.java
+/home/sactel-cloud/Documentos/MinTIC/cuboverde.org/curdcuboverde/src/main/java/com/curdcuboverde/service/UserService.java
+/home/sactel-cloud/Documentos/MinTIC/cuboverde.org/curdcuboverde/src/main/java/com/curdcuboverde/entity/Role.java
+/home/sactel-cloud/Documentos/MinTIC/cuboverde.org/curdcuboverde/src/main/java/com/curdcuboverde/controller/UserController.java
+/home/sactel-cloud/Documentos/MinTIC/cuboverde.org/curdcuboverde/src/main/java/com/curdcuboverde/repository/RoleRepository.java

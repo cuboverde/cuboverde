@@ -1,0 +1,19 @@
+.row {
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+h5 {
+  font-size: 2rem;
+  border-radius: 50%;
+  background-color: darkseagreen;
+  width: fit-content;
+  padding: 10px;
+
+}
+
+.logo {
+  width: 100px;
+}

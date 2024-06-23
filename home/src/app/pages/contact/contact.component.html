@@ -1,0 +1,76 @@
+<section>
+  <div class="container mt20 contact">
+    <div class="row">
+      <!-- <app-logo></app-logo> -->
+      <div class="col-lg-9 col-xs-12">
+        <h2>Formulario de contacto</h2>
+        <h3>Escríbenos y en breve los pondremos en contacto con ustedes</h3>
+        <div class="contact_form">
+          <div class="formulario">
+            <form [formGroup]="formGroup" (ngSubmit)="enviarFormulario()" class="p-3">
+              <div class="row align-items-center m2 p2">
+                <div class="col-lg-2">
+                  <label for="nombres" class="col-form-label">Nombres</label>
+                </div>
+                <div class="col-lg-8">
+                  <input type="text" id="nombres" class="form-control" aria-describedby="nombreHelpInline" placeholder="Nombre Completo">
+                </div>
+              </div>
+              <div class="row align-items-center m2 p2">
+                <div class="col-lg-2">
+                <label for="correo" class="form-label">Correo</label>
+                </div>
+                <div class="col-lg-4">
+                  <input type="email" formControlName="correo" class="form-control" id="correo" placeholder="Correo">
+                </div>
+                <div class="col-lg-2">
+                  <label for="telefono" class="form-label">Teléfono</label>
+                </div>
+                <div class="col-lg-4">
+                  <input type="text" formControlName="telefono" class="form-control" id="telefono" placeholder="Teléfono">
+                </div>
+              </div>
+              <div class="row align-items-center m2 p2">
+                <div class="col-lg-2">
+                  <label for="asunto" class="form-label">Asunto</label>
+                </div>
+                <div class="col-lg-8">
+                  <input type="text" formControlName="asunto" class="form-control" id="asunto" placeholder="Asunto">
+                </div>
+              </div>
+              <div class="row align-items-center m2 p2">
+                <div class="col-lg-2">
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                </div>
+                <div class="col-lg-8">
+                  <textarea formControlName="mensaje" class="form-control" id="mensaje" placeholder="Mensaje"></textarea>
+                </div>
+              </div>
+              <div class="row align-items-center m2 p2">
+                <div class="col-lg-2">
+                  <label ></label>
+                </div>
+                <div class="col-lg-6">
+                  <input type="checkbox" formControlName="acepto" class="form-check-input" id="politicasPrivacidad">
+                  <label class="form-check-label" for="politicasPrivacidad">He leído y acepto la <a href="politicas">Política de Privacidad</a>
+                  </label>
+                </div>
+              </div>
+              <div class="row align-items-center m2 p2">
+                <h3 class="trata">Tratamiento de tus datos</h3>
+                <p>
+                  CUBOVERDE.ORG te informa que los datos de carácter personal que proporciones completando este formulario se utilizarán con el fin de gestionar tu consulta. Legitimación: Tu consentimiento. El no introducir los datos de carácter personal que aparecen como requeridos en el formulario, tendrá como consecuencia que tu mensaje no se envíe. Como usuario e interesado te informo que los datos que facilites se ubicarán en los servidores de XXX (el servicio de hosting y mensajería CUBOVERDE.ORG) dentro de la Unión Europea, consulta la política de privacidad de ZZZZZZZZ. Tus datos no se comunicarán a terceros salvo por obligación legal. Podrás ejercer tus derechos de acceso, rectificación, portabilidad y suprimir los datos contactando al correo info&#64;cuboverde.org así como reclamar ante una autoridad de control. En la web https://www.cuboverde.org puedes consultar información adicional y detallada sobre la política de privacidad de la página. </p>
+              </div>
+              <div class="mb-3 tc">
+                <button type="submit" class="btn btn-success" [disabled]="formGroup.valid">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-xs-12">
+        <!-- <app-latestarticles></app-latestarticles> -->
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-6">
+        <form [formGroup]="formGroup" (ngSubmit)="enviarRegistro()">
+          <div
+            class="p-4 rounded-5 text-secondary shadow"
+            >
+            <div class="row align-items-center m2 p2">
+              <div class="col-lg-2">
+                <label for="inputApellidos" class="col-form-label">Apellidos</label>
+              </div>
+              <div class="col-lg-4">
+                <input formControlName="fistName" type="text" id="inputApellidos" class="form-control" aria-describedby="apellidoHelpInline">
+              </div>
+              <div class="col-lg-2">
+                <label for="inputNombres" class="col-form-label">Nombres</label>
+              </div>
+              <div class="col-lg-4">
+                <input formControlName="lastName" type="text" id="inputNombres" class="form-control" aria-describedby="nombreHelpInline">
+              </div>
+            </div>
+            <div class="row align-items-center m2 p2">
+              <div class="col-lg-2">
+                <label for="inputCorreo" class="col-form-label">E-mail</label>
+              </div>
+              <div class="col-lg-4">
+                <input formControlName="email" type="text" id="inputCorreo" class="form-control" aria-describedby="correoHelpInline">
+              </div>
+              <div class="col-lg-2">
+                <label for="inputMovil" class="col-form-label">Movil</label>
+              </div>
+              <div class="col-lg-4">
+                <input formControlName="phone" type="text" id="inputMovil" class="form-control" aria-describedby="movilHelpInline">
+              </div>
+            </div>
+            <div class="row align-items-center m2 p2">
+              <div class="col-lg-2">
+                <label for="inputPassword" class="col-form-label">Contraseña</label>
+              </div>
+              <div class="col-lg-4">
+                <input formControlName="userPassword" type="password" id="inputPassword" class="form-control" aria-describedby="passwordHelpInline">
+              </div>
+            </div>
+            <div class="row align-items-center m2 p2">
+              <div style="width: 50%;margin: auto;;" class="btn-group" role="group" aria-label="Button group with nested dropdown">
+              <button routerLink="/home" type="button" class="btn btn-danger">Cancelar</button>
+              <button type="submit" class="btn btn-success">Registar</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

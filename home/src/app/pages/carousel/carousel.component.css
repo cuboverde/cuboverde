@@ -1,0 +1,15 @@
+.carousel-item { 
+  height: 535px;
+}
+
+.carousel-caption {
+  bottom: 35%;
+}
+
+.carousel-caption h5 {
+  font-size: 3.5rem;
+}
+
+p {
+  font-size: 2rem;
+}

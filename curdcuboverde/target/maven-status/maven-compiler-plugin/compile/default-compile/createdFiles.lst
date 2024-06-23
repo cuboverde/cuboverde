@@ -1,0 +1,10 @@
+com/curdcuboverde/controller/RoleController.class
+com/curdcuboverde/repository/RoleRepository.class
+com/curdcuboverde/CurdcuboverdeApplication.class
+com/curdcuboverde/entity/User.class
+com/curdcuboverde/config/CorsConfig.class
+com/curdcuboverde/entity/Role.class
+com/curdcuboverde/service/UserService.class
+com/curdcuboverde/repository/UserRepository.class
+com/curdcuboverde/controller/UserController.class
+com/curdcuboverde/service/RoleService.class

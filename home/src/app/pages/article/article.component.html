@@ -1,0 +1,30 @@
+<section>
+  <div class="container mt20">
+    <div class="row">
+      <div class="col-lg-9 col-xs-12">
+        <div class="row plr30">
+          <div class="card p20"> 
+            <div class="card">
+              <h2 class="card-title">{{ article.titlePublication }}</h2>
+              <img src="/assets/blog/{{article.images}}" class="card-img-top" alt="...">
+              <div class="card-img-overlay">
+                <span class="badge rounded-pill text-bg-danger"><i class="bi bi-bookmark-heart-fill"></i> {{article.likes}}</span>
+                <span class="badge rounded-pill text-bg-warning"><i class="bi bi-eye-fill"></i> {{article.shared}}</span>
+                <span class="badge rounded-pill text-bg-info"><i class="bi bi-bookmark-heart-fill"></i> {{article.favorites}}</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <p class="">{{ article.descriptionPublication }}</p>
+            </div>
+            <h3>Acerca delAutor</h3>
+            <h3>Comentarios <span class="badge rounded-pill text-bg-info"> </span></h3>
+            <!-- <app-coments></app-coments> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-xs-12">
+        <!-- <app-latestarticles></app-latestarticles> -->
+      </div>
+    </div>
+  </div>
+</section>

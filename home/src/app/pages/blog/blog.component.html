@@ -1,0 +1,44 @@
+<section>
+  <div class="container mt20">
+    @if(errorMessage){
+      <app-errormessage [errorMessage]="errorMessage"></app-errormessage>
+    }
+    <div class="row">
+      <div class="col-lg-9 col-xs-12">
+        <div class="row">
+          @if((blogResults$ | async); as resultObject){
+            @for (item of resultObject; track $index) {
+              <div class="col-lg-4">
+                <!-- <div class="card mb-3 col-lg-4">
+                  <div class="cardImg">
+                    <img src="/assets/blog/{{item.images}}" class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                      <span class="badge rounded-pill text-bg-danger"><i class="bi bi-bookmark-heart-fill"></i> {{item.likes}}</span>
+                      <span class="badge rounded-pill text-bg-warning"><i class="bi bi-eye-fill"></i> {{item.shared}}</span>
+                      <span class="badge rounded-pill text-bg-info"><i class="bi bi-bookmark-heart-fill"></i> {{item.favorites}}</span>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">{{item.titlePublication}}</h5>
+                    <p class="card-text card-text-body">{{item.descriptionPublication}}</p>
+                    <p class="card-text">Publicado el <small class="text-body-secondary">{{item.publicationDate}}</small></p>
+                  </div>
+                  <div class="card-footer">
+                    <a class="btn btn-success" routerLink="article/{{item.idPublication}}">Mas Informacion</a>
+                  </div>
+                </div> -->
+                <app-articulo-item class="col-lg-6" [blogInfo]="item"></app-articulo-item>
+
+              </div>
+            }
+          }
+        </div>
+        </div>
+        <div class="col-lg-3 col-xs-12">
+          <!-- <app-latestarticles></app-latestarticles> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+

@@ -1,0 +1,49 @@
+.tc {
+  text-align: center;
+}
+
+img {
+  width: 100px;
+  border-radius:50%; 
+  text-align:center;
+  padding:10px;
+}
+
+h2{
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  line-height: 0.75;
+  margin-top:5px;
+}
+
+h2 span{
+  font-size: 1.0rem;
+  text-transform: capitalize;
+}
+
+@media (max-width: 1366px) {
+  img {
+    width: 80px;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h2 span {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  img {
+    width: 60px;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h2 span {
+    font-size: 0.8rem;
+  }
+}
+

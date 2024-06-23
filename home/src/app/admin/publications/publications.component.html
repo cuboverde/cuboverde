@@ -1,0 +1,54 @@
+<section>
+  <div class="row">
+    <div class="col-lg-10">
+      @if(errorMessage){
+        <app-errormessage [errorMessage]="errorMessage"></app-errormessage>
+      }@else {
+        <div class="panel panel-success">
+          <div class="panel-heading"> 
+            <div class="row ">
+              <div class="col-lg-6">
+                <h3 class="w3ls_head tituloPagina"><i class="fa-regular fa-newspaper fa-2x"></i> Publicaciones </h3>
+              </div>
+              <div class="col-lg-6" style="text-align:right;">
+                <a 
+                  data-toggle="modal"
+                  style="margin:auto" type="button" class="btn btn-success" href="">
+                  <i class="fa-solid fa-file-circle-plus"></i> Adicionar Publicacion</a>
+              </div>
+            </div>
+          </div>
+          <table class="table table-striped">
+            <thead class="table-primary">
+              <tr class="tcen">
+                <th scope="col">ID</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Titulo Publicacion</th>
+                <th scope="col">Imagen</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Accion</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (item of publications; track $index) {
+                <tr>
+                  <td>{{item.idPublication}}</td>
+                  <td>{{item.idCategory}}</td>
+                  <td>{{item.titlePublication}}</td>
+                  <td><img class="ttab" src="/assets/blog/{{item.images}}" alt=""></td>
+                  <td>{{item.approved}}</td>
+                  <td class="tcen">
+                    <div class="group-buttom">
+                      <button class="btn btn-info btn-xs"><i class="fa-solid fa-trash"></i></button> 
+                      <button class="btn btn-warning btn-xs"><i class="fa-solid fa-pen-to-square"></i></button> 
+                    </div>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,49 @@
+<section>
+  <div class="row">
+    <div class="col-lg-9">
+      @if(errorMessage){
+        <app-errormessage [errorMessage]="errorMessage"></app-errormessage>
+      }@else {
+        <div class="panel panel-success">
+          <div class="panel-heading">
+            <div class="row ">
+              <div class="col-lg-6">
+                <h3 class="w3ls_head tituloPagina"><i class="fa-solid fa-layer-group fa-2x"></i>  Categorias </h3>
+              </div>
+              <div class="col-lg-6" style="text-align:right;">
+                <a 
+                  data-toggle="modal" 
+                  style="margin:auto" type="button" class="btn btn-success" href="">
+                  <i class="fa-regular fa-square-plus"></i>
+                   Adicionar Categoria</a>
+              </div>
+            </div>
+          </div>
+          <table class="table table-striped">
+            <thead class="table-primary">
+              <tr class="tcen">
+                <th scope="col">ID</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Accion</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (item of categories; track $index) {
+                <tr>
+                  <td>{{item.idCategory}}</td>
+                  <td>{{item.descriptionCategory}}</td>
+                  <td class="tcen">
+                    <div class="group-buttom">
+                      <button class="btn btn-info btn-xs"><i class="fa-solid fa-trash"></i></button> 
+                      <button class="btn btn-warning btn-xs"><i class="fa-solid fa-pen-to-square"></i></button> 
+                    </div>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      }
+    </div>
+  </div>
+</section>

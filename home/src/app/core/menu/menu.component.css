@@ -1,0 +1,40 @@
+.nav-pills .nav-link {
+  color:#FFF;
+}
+
+.nav {
+  padding: 10px;
+  background: #0000002e;
+  margin-top: 6px;
+  float: right;
+}
+
+/* .nav-item:hover {
+  background-color: rgba(0, 0, 0, 0.466);
+  color:#FFF;
+} */
+
+.menuCentro {
+  margin: auto;
+}
+
+.dropdown-menu {
+  width: 100%;
+  color: #FFF;
+  background: #000;
+}
+
+.dropdown-menu a {
+  color: #FFF;
+  padding: 10px 20px;
+}
+
+.dropdown-menu a:hover, .nav-item:hover {
+  /* color: #000; */
+  background-color: rgba(255, 255, 255, 0.171);
+}
+
+
+a {
+  text-transform: uppercase;
+}

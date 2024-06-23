@@ -1,0 +1,74 @@
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="../../../assets/fondos/images4.jpg"
+          class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form [formGroup]="formGroup" (ngSubmit)="enviarLogin()">
+          <div
+            class="bg-white p30 rounded-5 text-secondary shadow"
+            >
+            <div class="d-flex justify-content-center">
+              <img
+                src="/assets/core/login-icon.svg"
+                alt="login-icon"
+              />
+            </div>
+            <div class="text-center fs-1 fw-bold">Ingresar</div>
+            <div class="input-group mt-4">
+              <div class="input-group-text bg-success">
+                <img
+                  src="/assets/core/username-icon.svg"
+                  alt="username-icon"
+                  style="height: 1rem"
+                />
+              </div>
+              <input
+                class="form-control bg-light"
+                type="email"
+                placeholder="Ingrese Usuario"
+                formControlName="email"
+              />
+            </div>
+            <div class="input-group mt-1">
+              <div class="input-group-text bg-success">
+                <img
+                  src="/assets/core/password-icon.svg"
+                  alt="password-icon"
+                  style="height: 1rem"
+                  />
+                  </div>
+                  <input
+                  class="form-control bg-light"
+                  type="password"
+                  formControlName="password"
+                  placeholder="Contraseña"
+              />
+            </div>
+            <div class="d-flex justify-content-around mt-1">
+              <div class="pt-1">
+                <a
+                  href="#"
+                  class="text-decoration-none text-success fw-semibold fst-italic"
+                  style="font-size: 0.9rem"
+                  >Olvido Su Contraseña?</a
+                >
+              </div>
+            </div>
+            <div class="w-100 mt-4 fw-semibold shadow-sm">
+              <button type="submit" class="btn btn-success w-100">Ingresar</button>
+            </div>
+            <div class="d-flex gap-1 justify-content-center mt-1">
+              <div>No tiene una Cuenta ?</div>
+              <a routerLink="/registrar" class="text-decoration-none text-success fw-semibold"
+                >Registrese</a
+              >
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
