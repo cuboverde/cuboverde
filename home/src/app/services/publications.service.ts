@@ -15,4 +15,13 @@ export class PublicationsService {
     return this.httpClient.get<PublicationInterface[]>(this.apiUrl);
   }
 
+  postPublications(article:any): Observable<PublicationInterface[]> {
+    return this.httpClient.post<PublicationInterface[]>(this.apiUrl,article);
+  }
+
+  aprovedPublications(id:any): Observable<PublicationInterface[]> {
+    return this.httpClient.post<PublicationInterface[]>(`${this.apiUrl}/aprove/${id}`,id);
+  }
+
+
 }

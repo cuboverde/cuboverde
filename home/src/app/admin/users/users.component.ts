@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { UserInterface } from '../../interfaces/interfaces';
 import { UsersService } from '../../services/users.service';
 import { ErrormessageComponent } from '../../core/errormessage/errormessage.component';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-users',
   standalone: true,
-  imports: [ErrormessageComponent],
+  imports: [ErrormessageComponent, RouterLink],
   templateUrl: './users.component.html',
   styleUrl: './users.component.css'
 })

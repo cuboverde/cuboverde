@@ -25,13 +25,11 @@ section {
 
 .pararalelogramo {
   position: absolute;
-  /* top:15%; */
   background-size: cover;
   width: 30%;
   height: 77%;
   border: 1px solid #555;
   background-repeat: none;
-  /* background: #053d03; */
 }
 
 .izq {
@@ -175,16 +173,12 @@ section {
 
 
 @media (max-width: 1366px) {
-  /* section {
-    height: 500px;
-  } */
 
   .pararalelogramo {
     height: 75%;
-    /* top:17%; */
   }
 
   .card {
-    top:22.5%
+    top:2.5%
   }
 }

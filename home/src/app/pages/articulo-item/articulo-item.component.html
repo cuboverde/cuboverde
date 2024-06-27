@@ -1,7 +1,7 @@
 <div class="card mb-3">
   <form action="">
     <div class="cardImg">
-      <img src="../../../assets/blog/{{blogInfo.images}}" class="card-img" alt="...">
+      <img src="/assets/blog/{{blogInfo.images}}" class="card-img" alt="...">
       <div class="card-img-overlay">
         <span class="badge rounded-pill text-bg-danger"><i class="bi bi-bookmark-heart-fill"></i> {{blogInfo.likes}}</span>
         <span class="badge rounded-pill text-bg-warning"><i class="bi bi-eye-fill"></i> {{blogInfo.shared}}</span>
@@ -15,7 +15,6 @@
     </div>
     <div class="card-footer">
       <a class="btn btn-success" routerLink="article/{{blogInfo.idPublication}}">Mas Informacion</a>
-      <!-- <button class="btn btn-success" (onClick)="irArticulo(blogInfo.idPublication)">Mas Informacion</button> -->
     </div>
   </form>
 </div>

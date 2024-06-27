@@ -11,7 +11,7 @@ export class RegisterService {
   endPoint: string = environment.apiurl+'/users'
   constructor(private http: HttpClient) { }
   
-  public userRegister(user:any):Observable<UserInterface>{
+  public userRegister(user:any):Observable<UserInterface[]>{
 
     const params = new HttpParams()
       .set('email', user.email)
@@ -22,7 +22,7 @@ export class RegisterService {
       .set('creationDate',user.creationDate)
       .set('idRol',3)
 
-    return this.http.post<UserInterface>(this.endPoint,user);
+    return this.http.post<UserInterface[]>(this.endPoint,user);
 
   }
 }

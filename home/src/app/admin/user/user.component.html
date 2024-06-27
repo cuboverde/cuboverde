@@ -1,1 +1,72 @@
-<p>user works!</p>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="container">
+        <div class="col-lg-10">
+          <div class="container">
+            <div class="card card-warning">
+              <div class="card-header">
+                <h3 class="card-title"><i class="fa-solid fa-user-plus"></i> Nuevo Usuario </h3>
+              </div>
+              <form [formGroup]="formGroup" (ngSubmit)="guardaUsuario()">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <label for="apellidos" class="control-label">Apellidos</label>
+                      <div class="">
+                        <input formControlName="apellidos" type="text" class="form-control" id="apellidos" name="apellidos" required >
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <label for="nombres" class="control-label ">Nombres</label>
+                      <div class="">
+                        <input formControlName="nombres" type="text" class="form-control" id="nombres" name="nombres" required >
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <label for="correo" class="control-label ">Correo</label>
+                      <div class="">
+                        <input formControlName="correo" type="email" class="form-control" id="correo" name="correo" required >
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <label for="password" class="control-label">Contraseña</label>
+                      <div class="">
+                        <input formControlName="password" type="password" class="form-control" id="password" name="password" required>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <label for="correo" class="control-label ">Celular</label>
+                      <div class="">
+                        <input formControlName="celular" type="text" class="form-control" id="celular" name="celular" required >
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <label for="tipo" class="control-label">Tipo de Usuario</label>
+                      <div class="">
+                        <select formControlName="tipo" name="tipo" id="tipo" class="form-control" required>
+                          <option value="">Seleccione el Tipo Usuario</option>
+                          @if((rolesResults$ | async); as resultObject){
+                            @for (item of resultObject; track $index) {
+                              <option value="{{item.idRol}}">{{item.rol}}</option>
+                            }
+                          }
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="btn-group">
+                    <a routerLink="/users" type="button" class="btn btn-warning"><i class="fa fa-reply"></i> Regresar</a>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Guardar</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

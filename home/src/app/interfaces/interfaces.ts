@@ -55,3 +55,14 @@ export interface PublicationInterface {
   images:string;
   
 }
+
+export interface CategoriesInterface {
+  idCategory:number;
+  descriptionCategory:string;
+  createdDate:string;
+}
+
+export interface RolesInterface {
+  idRol:number;
+  rol:string;
+}

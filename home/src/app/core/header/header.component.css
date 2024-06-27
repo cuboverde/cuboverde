@@ -2,8 +2,7 @@ section {
   max-width: 100%;
   background-image: url('../../../assets/fondos/image10.jpg');
   background-size: cover;
-  /* background-position: right; */
-  min-height: 172px;
+  min-height: 130px;
   background-position-y: 500px;
 }
 
@@ -34,7 +33,7 @@ section {
 }
 
 header {
-  height: 172px;
+  height: 130px;
 }
 
 .col-lg-4 {
@@ -69,7 +68,7 @@ header {
 }
 
 .login img {
-  width: 80%;
-  height: 20%;
-  margin: 0 auto;
+  width: 70%;
+  height: 30%;
+  margin: 12px auto;
 }

@@ -6,16 +6,18 @@ import { AsyncPipe } from '@angular/common';
 import { EMPTY, Observable, catchError } from 'rxjs';
 import { ErrormessageComponent } from '../../core/errormessage/errormessage.component';
 import { ArticuloItemComponent } from '../articulo-item/articulo-item.component';
+import { TagsComponent } from '../tags/tags.component';
 
 
 @Component({ 
   selector: 'app-blog',
   standalone: true,
-  imports: [AsyncPipe, ErrormessageComponent, ArticuloItemComponent, RouterLink],
+  imports: [AsyncPipe, ErrormessageComponent, ArticuloItemComponent, RouterLink, TagsComponent],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
 export class BlogComponent implements OnInit{
+
   public blogResults$!: Observable<BlogInterface[]>
   public errorMessage!:string;
   constructor(private blogService: BlogService, private router: Router){}
@@ -26,11 +28,5 @@ export class BlogComponent implements OnInit{
       return EMPTY;
     }));
   }
-
-  /* irArticulo(id: number) {
-    console.log(id)
-    this.router.navigate(['/article', id]);
-  } */
-
 
 }

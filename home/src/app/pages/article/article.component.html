@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-lg-9 col-xs-12">
         <div class="row plr30">
-          <div class="card p20"> 
+          <div class="card p20">
             <div class="card">
               <h2 class="card-title">{{ article.titlePublication }}</h2>
               <img src="/assets/blog/{{article.images}}" class="card-img-top" alt="...">
@@ -15,14 +15,21 @@
             </div>
             <div class="card-body">
               <p class="">{{ article.descriptionPublication }}</p>
+              <button (click)="meGusta()" class="btn btn-success btn-xs"><i class="fa-regular fa-heart"></i> Me Gusta <span>{{ article.favorites }}</span></button>
+              <button (click)="compartir()" class="btn btn-warning btn-xs fder "><i class="fa-solid fa-share-nodes"></i> Compartir <span>{{ article.shared }}</span></button>
             </div>
-            <h3>Acerca delAutor</h3>
-            <h3>Comentarios <span class="badge rounded-pill text-bg-info"> </span></h3>
+            <div class="card-footer">
+              <h3>Acerca del Autor</h3>
+              <h3>Comentarios <span class="badge rounded-pill text-bg-info"> </span></h3>
+            </div>
             <!-- <app-coments></app-coments> -->
+            <a class="btn btn-success"  href="javascript:history.back()"> Regresar</a>
           </div>
+          <!-- <button class="btn btn-success" click="back()"> Regresar</button> -->
         </div>
       </div>
       <div class="col-lg-3 col-xs-12">
+        <app-tags></app-tags>
         <!-- <app-latestarticles></app-latestarticles> -->
       </div>
     </div>

@@ -13,6 +13,7 @@
               <div class="col-lg-6" style="text-align:right;">
                 <a 
                   data-toggle="modal"
+                  routerLink="/newarticle"
                   style="margin:auto" type="button" class="btn btn-success" href="">
                   <i class="fa-solid fa-file-circle-plus"></i> Adicionar Publicacion</a>
               </div>
@@ -34,13 +35,16 @@
                 <tr>
                   <td>{{item.idPublication}}</td>
                   <td>{{item.idCategory}}</td>
-                  <td>{{item.titlePublication}}</td>
+                  <td class="w50">{{item.titlePublication}}</td>
                   <td><img class="ttab" src="/assets/blog/{{item.images}}" alt=""></td>
                   <td>{{item.approved}}</td>
                   <td class="tcen">
                     <div class="group-buttom">
-                      <button class="btn btn-info btn-xs"><i class="fa-solid fa-trash"></i></button> 
-                      <button class="btn btn-warning btn-xs"><i class="fa-solid fa-pen-to-square"></i></button> 
+                      @if(item.approved== 0){
+                        <button type="button" (click)="apruebaArticulo(item.idPublication)" class="btn btn-success btn-xs"><i class="fa-solid fa-check"></i></button> 
+                      }
+                      <button class="btn btn-info btn-xs"><i class="fa-solid fa-trash"></i></button>
+                      <button class="btn btn-warning btn-xs"><i class="fa-solid fa-pen-to-square"></i></button>
                     </div>
                   </td>
                 </tr>

@@ -16,22 +16,33 @@ public class RoleController {
 
     @GetMapping
     public List<Role> getAll(){
+
         return roleService.getRoles();
     }
 
     @GetMapping("/{IdRol}")
     public Optional<Role> getBId(@PathVariable("IdRol") Long IdRol){
+
         return roleService.getRol(IdRol);
     }
 
 
     @PostMapping
-    public void saveUpdate (@RequestBody Role role){
+    public Optional<Role> saveUpdate (@RequestBody Role role){
+
         roleService.saveOrUpdate(role);
+        return roleService.getRol(role.getIdRol());
+    }
+
+    @PutMapping("modificar/{id}")
+    public Optional<Role> update(@PathVariable("id") Long id, @RequestBody Role role){
+        roleService.update(id, role);
+        return roleService.getRol(id);
     }
 
     @DeleteMapping("/{IdRol}")
     public void delete(@PathVariable("IdRol") Long IdRol){
+
         roleService.delete(IdRol);
     }
 }

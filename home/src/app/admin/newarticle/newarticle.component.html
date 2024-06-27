@@ -1,0 +1,61 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="container">
+        <div class="col-lg-10">
+          <div class="card card-warning">
+            <div class="card-header">
+              <h3 class="card-title"><i class="fa-regular fa-newspaper fa-2x"></i> Nuevo Publicacion</h3>
+              <div class="card-tools">
+              </div>
+            </div>
+            <form [formGroup]="formGroup" (ngSubmit)="guardaArticulo()">
+              <div class="card-body">
+                <div class="form-horizontal">
+                  <label class="control-label col-lg-2" for="inputName">Titulo</label>
+                  <div class="col-lg-6">
+                    <input
+                      type="text"
+                      id="inputName"
+                      class="form-control"
+                      formControlName="titulo"
+                      >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputDescription">Articulo</label>
+                  <textarea formControlName="articulo" id="inputDescription" class="form-control" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="inputStatus">Categoria</label>
+                  <div class="col-lg-6">
+                    <select formControlName="categoria" id="inputStatus" class="form-control custom-select">
+                      <option selected value="">Seleccione la Categoria</option>
+                      @if((tagsResults$ | async); as resultObject){
+                        @for (item of resultObject; track $index) {
+                          <option value="{{item.idCategory}}">{{item.descriptionCategory}}</option>
+                        }
+                      }
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputStatus">Imagen</label>
+                  <div class="col-lg-6">
+                    <input formControlName="archivo" type="file"  accept="image/png, image/jpeg" id="inputName" class="form-control" >
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="btn-group">
+                  <a routerLink="publications" class="btn btn-warning"><i class="fa-solid fa-reply"></i> Regresar</a>
+                  <button type="submit" class="btn btn-info"><i class="fa-solid fa-floppy-disk"></i> Guardar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

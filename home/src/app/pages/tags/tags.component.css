@@ -1,0 +1,13 @@
+.badge, h3 {
+  font-size: 0.85rem;
+}
+.badge {
+  padding: 5px 10px;
+}
+
+h2 {
+  text-align: center;
+  /* background-color: #129312; */
+  background: rgb(10, 114, 1);
+
+}

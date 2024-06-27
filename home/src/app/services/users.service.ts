@@ -8,11 +8,14 @@ import { UserInterface } from '../interfaces/interfaces'
   providedIn: 'root'
 })
 export class UsersService {
-
   private apiUrl = `${environment.apiurl}/users`;
   constructor(private httpClient: HttpClient) { }
   getUsuarios(): Observable<UserInterface[]> {
     return this.httpClient.get<UserInterface[]>(this.apiUrl);
+  }
+
+  postUsuarios(user:any): Observable<UserInterface[]> {
+    return this.httpClient.post<UserInterface[]>(this.apiUrl,user);
   }
 
 }

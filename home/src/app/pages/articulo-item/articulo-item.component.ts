@@ -15,10 +15,4 @@ export class ArticuloItemComponent {
 
   constructor(private router: Router){}
 
-  /* irArticulo(id: number) {
-    console.log(id)
-    this.router.navigate(['/article', id]);
-  } */
-
-
 }

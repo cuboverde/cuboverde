@@ -15,17 +15,29 @@ public class CategoriesService {
     CategoriesRepository categoriesRepository;
 
     public List<Categories> getCategories(){
+
         return categoriesRepository.findAll();
     }
     public Optional<Categories> getCategory(Long id){
+
         return categoriesRepository.findById(id);
     }
 
     public void saveOrUpdate(Categories categories){
+
         categoriesRepository.save(categories);
     }
 
+    public void updateCategories(Long id, Categories category){
+        Categories updateCat = categoriesRepository.findById(id).get();
+
+        updateCat.setDescriptionCategory(category.getDescriptionCategory());
+
+        categoriesRepository.save(updateCat);
+    }
+
     public void delete(Long id){
+
         categoriesRepository.deleteById(id);
     }
 }

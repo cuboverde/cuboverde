@@ -8,57 +8,30 @@ import { environment } from '../../environments/environment';
 })
 export class LoginService {
   redirectUrl: string="";
-  endPoint: string =`${environment.apiurl}/login`
-  
+  endPoint: string =`${environment.apiurl}/users/login/`
   getLoggelnName = new EventEmitter<boolean>();
 
   constructor(private http: HttpClient) { }
-
-  /* endPoint:string = `${environment.apiurl}/publications`
-  constructor(private httpClient: HttpClient) { }
-
-  getBlogList(): Observable <BlogInterface[]> {
-    return this.httpClient.get<BlogInterface[]>(this.endPoint);
-  } */
-  
-  
-  public userlogin(user:any):Observable<any>{
-    // console.log(user)
-    const params = new HttpParams()
-      .set('email', user.email)
-      .set('password',user.password)
-
-    return this.http.post<any>(`${this.endPoint}?${params.toString()}`,user)
-    .pipe(
+  public userlogin(email:any):Observable<any>{
+    return this.http.get<any>(`${this.endPoint}${email}`).pipe(
       tap(response =>{
-        console.log("Http response",response);
+
+        // console.log("Http response",response);
+        return response;
+        /* 
+        if(response = null){
+          response = false;
+        }
+        */
       }),
       map(user=>{
-        this.setToken(user.name);
-        this.getLoggelnName.emit(true);
+        let resp = this.getLoggelnName.emit(true);
         return user;
       })
     );
-    console.log(user)
-  }
-
-  setToken(token:string){
-    localStorage.setItem('token',token);
-  }
-
-  getToken(){
-    return localStorage.getItem('token');
-  }
-
-  deleteToken(){
-    localStorage.removeItem('token');
   }
 
   isLoggedIn(){
-    const usertoken = this.getToken();
-    if(usertoken != null){
-      return true;
-    }
     return false;
   }
 

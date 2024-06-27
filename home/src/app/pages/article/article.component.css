@@ -34,3 +34,16 @@ h2 {
   top: auto;
   left: auto;
 }
+
+
+.btn {
+  width: 30%;
+}
+
+p {
+  text-align: justify;
+}
+
+.fder {
+  float: right;
+}

@@ -16,22 +16,38 @@ public class UserController {
 
     @GetMapping
     public List<User> getAll(){
+
         return userService.getUsers();
     }
 
     @GetMapping("/{IdUser}")
     public Optional<User> getBId(@PathVariable("IdUser") Long IdUser){
+
         return userService.getUser(IdUser);
+    }
+
+    @GetMapping("/login/{Email}")
+    public Optional<User> LoginByEmail(@PathVariable("Email") String email){
+
+        return userService.findByEmail(email);
     }
 
 
     @PostMapping
-    public void saveUpdate (@RequestBody User user){
+    public Optional<User> saveUpdate (@RequestBody User user){
         userService.saveOrUpdate(user);
+        return userService.getUser(user.getIdUser());
+    }
+
+    @PutMapping("Modificar/{id}")
+    public Optional<User> update(@PathVariable("id") Long id, @RequestBody  User usermodel){
+        userService.update(id, usermodel);
+        return userService.getUser(id);
     }
 
     @DeleteMapping("/{IdUser}")
     public void delete(@PathVariable("IdUser") Long IdUser){
+
         userService.delete(IdUser);
     }
 }

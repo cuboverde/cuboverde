@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { environment } from '../../../environments/environment';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { LoginService } from '../../services/login.service';
 
 @Component({
   selector: 'app-menu',
@@ -12,7 +13,31 @@ import { RouterLink } from '@angular/router';
 export class MenuComponent {
   entorno = environment;
   isLogin = false;
-  isRol = 1;
+  isRol = 0;
+
+  constructor(private loginService: LoginService, private router: Router ){
+
+    loginService.getLoggelnName.subscribe(name => this.changeName(name));
+    if(this.loginService.isLoggedIn()){
+      this.isLogin = true;
+    }else{
+      this.isLogin = false;
+    }
+  }
+
+  private changeName(name: boolean):void{
+    this.isLogin = name;
+  }
+
+  logout(){
+    // this.dataService.deleteToken();
+    this.isLogin = false;
+    this.router.navigate(['home']);
+
+    // window.location.href ='home';
+  }
+
+
   menus = [
     {
       id: 1,

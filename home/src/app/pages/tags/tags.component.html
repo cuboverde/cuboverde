@@ -1,0 +1,18 @@
+
+<section>
+  <div class="row">
+    @if(errorMessage){
+      <app-errormessage [errorMessage]="errorMessage"></app-errormessage>
+    }@else{
+      <h2 class="sombraBlanca">TAGS</h2>
+      @if((tagsResults$ | async); as resultObject){
+        @for (item of resultObject; track $index) {
+          <h3>
+            <span class="badge rounded-pill bg-secondary">{{item.descriptionCategory}}</span>
+          </h3> 
+        }
+      }
+    }
+  </div>
+
+</section>

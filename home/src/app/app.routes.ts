@@ -14,6 +14,8 @@ import { UsersComponent } from './admin/users/users.component';
 import { CategoriesComponent } from './admin/categories/categories.component';
 import { PublicationsComponent } from './admin/publications/publications.component';
 import { ArticleComponent } from './pages/article/article.component';
+import { NewarticleComponent } from './admin/newarticle/newarticle.component';
+import { UserComponent } from './admin/user/user.component';
 
 
 export const routes: Routes = [
@@ -30,7 +32,10 @@ export const routes: Routes = [
   {path: 'users',component:UsersComponent},
   {path: 'categorias',component:CategoriesComponent},
   {path: 'publications',component:PublicationsComponent},
+  {path: 'newarticle',component:NewarticleComponent },
   {path: 'blog/article/:id',component: ArticleComponent },
+  {path: 'adduser',component: UserComponent },
+  // {path: 'salir',component:PublicationsComponent},
   {path: '',redirectTo: 'home', pathMatch: 'full' },
   {path: '**', component: NotfoundComponent}
 ];
