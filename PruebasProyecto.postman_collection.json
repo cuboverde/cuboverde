@@ -1,0 +1,1227 @@
+{
+	"info": {
+		"_postman_id": "a137ce3b-8d3f-4004-b675-fc54881d208e",
+		"name": "PruebasProyecto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21490455"
+	},
+	"item": [
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guardar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"rol\": \"Admnistrador\",\r\n  \"creationDate\": \"20240530\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/api/v1/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar_Por_Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/roles/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"roles",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar-Por-Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"rol\": \"Administrador\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/api/v1/roles/modificar/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"roles",
+								"modificar",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar-Por-Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/roles/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"roles",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Guardar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fistName\": \"Jose\",\r\n  \"lastName\": \"Perez\",\r\n  \"phone\": \"3213456789\",\r\n  \"email\": \"Jose@email.com\",\r\n  \"idRol\": 8,\r\n  \"userPassword\": \"\",\r\n  \"creationDate\": \"20240530\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar-Por-Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fistName\": \"Jose\",\r\n  \"lastName\": \"Suarez\",\r\n  \"phone\": \"3213456789\",\r\n  \"email\": \"Jose@email.com\",\r\n  \"idRol\": 8,\r\n  \"userPassword\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/api/v1/users/Modificar/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"Modificar",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar-Usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar-Por-Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar-Por_Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar-Por-Email",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/users/login/Jose@email.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login",
+								"Jose@email.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Records",
+			"item": [
+				{
+					"name": "Guardar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descriptionRecord\": \"Archivo de queja\",\r\n    \"idFeedBack\": 4,\r\n    \"record\": \"jchergyfnsjdnvuie\",\r\n    \"creationDate\": \"20240606\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/api/v1/records",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"records"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar-Records",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/records",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"records"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar-Por-Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idFeedBack\": 1,\r\n    \"record\": \"jchergyfnsjdnvuie\",\r\n    \"descriptionRecord\": \"Archivo de queja puesta\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/api/v1/records/modificar/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"records",
+								"modificar",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar-Por-Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/records/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"records",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar-Por-Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/records/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"records",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Images",
+			"item": [
+				{
+					"name": "Guardar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descriptionImage\": \"Imagen prueba\",\r\n    \"idContent\": 0,\r\n    \"idFeedBack\": 1,\r\n    \"urlImage\": \"https://www.google.com/imgres?q=deforestaci%C3%B3n&imgurl=https%3A%2F%2Fcambio.com.co%2Fwp-content%2Fuploads%2F2022%2\",\r\n    \"creationDate\": \"20240610\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/api/v1/images",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar_images",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/images",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"images"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar-Por-Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/images/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"images",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar-Por-Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descriptionImage\": \"Imagen prueba mod\",\r\n    \"idContent\": 0,\r\n    \"idFeedBack\": 1,\r\n    \"urlImage\": \"https://www.google.com/imgres?q=deforestaci%C3%B3n&imgurl=https%3A%2F%2Fcambio.com.co%2Fwp-content%2Fuploads%2F2022%2\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/api/v1/images/modificar/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"images",
+								"modificar",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar-Por-Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/images/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"images",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Feedbacks",
+			"item": [
+				{
+					"name": "Guardar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"feedBackDate\": \"20240524\",\r\n    \"idUser\": 3,\r\n    \"creationDate\": \"20240605\",\r\n    \"typeFeedBack\": \"Queja\",\r\n    \"descriptionFeedBack\": \"comentario\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/api/v1/feedback",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"feedback"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar-Por-Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"feedBackDate\": \"20240524\",\r\n    \"idUser\": 3,\r\n    \"typeFeedBack\": \"Queja\",\r\n    \"descriptionFeedBack\": \"comentario\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/api/v1/feedback/modificar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"feedback",
+								"modificar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar-FeedBacks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/feedback",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"feedback"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar-Por-Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/feedback/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"feedback",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar-Por-Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/feedback/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"feedback",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Publications",
+			"item": [
+				{
+					"name": "Listar-Publicaciones-Aprobadas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/publications/approved",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"publications",
+								"approved"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar-Publicaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/publications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"publications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar-Por-Categoria",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/publications/findByCategory/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"publications",
+								"findByCategory",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incrementar-Likes-Por-Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/publications/likes/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"publications",
+								"likes",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incrementar-Shareds-Por-Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/publications/shared/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"publications",
+								"shared",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Incrementar-Favorites-Por-Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/publications/favorites/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"publications",
+								"favorites",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar-Por-Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"titlePublication\": \"Gobierno aprueba ley de energía solar obligatoria en nuevas construcciones\",\r\n        \"descriptionPublication\": \"El gobierno ha aprobado una ley que exige la instalación de paneles solares en todas las nuevas construcciones residenciales y comerciales. Esta medida busca acelerar la transición hacia las energías renovables y reducir la\",\r\n        \"idCategory\": 2,\r\n        \"idUser\": 1,\r\n        \"typePublication\": \"Denuncia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/api/v1/publications/modificar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"publications",
+								"modificar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar-Por-Id-User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/publications/findByUser/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"publications",
+								"findByUser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Aprobar-Por-Id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/publications/aprove/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"publications",
+								"aprove",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guardar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"publicationDate\": \"2024-06-11 12:50\",\r\n        \"images\": \"ampliacion_area_protegida.jpg\",\r\n        \"titlePublication\": \"Parque nacional Natural\",\r\n        \"descriptionPublication\": \"Prueba de guardado de publicación segunda\",\r\n        \"creationDate\": \"2024-06-11\",\r\n        \"idCategory\": 3,\r\n        \"idUser\": 3,\r\n        \"approved\": \"0\",\r\n        \"favorites\": 0,\r\n        \"shared\": 0,\r\n        \"likes\": 0,\r\n        \"typePublication\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/api/v1/publications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"publications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar-Por-Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/publications/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"publications",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contents",
+			"item": [
+				{
+					"name": "Guardar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"contenido prueba 2\",\r\n    \"idPublication\": 2,\r\n    \"creationDate\": \"20240610\",\r\n    \"dateContent\": \"20240610\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/api/v1/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"contents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar-Contents",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/contents",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"contents"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar-Por-Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"contenido prueba 2 modificado 2\",\r\n    \"idPublication\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/api/v1/contents/modificar/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"contents",
+								"modificar",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar-Por-Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/contents/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"contents",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar-Por-Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/contents/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"contents",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "Listar-Categorias",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar-Por-Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/categories/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Guardar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descriptionCategory\": \"Energias Limpias\",\r\n    \"creationDate\": \"20240606\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/api/v1/categories",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar-Por-Id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"descriptionCategory\": \"Energias Renovables\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8095/api/v1/categories/modificar/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"modificar",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar-Por-Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8095/api/v1/categories/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8095",
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
